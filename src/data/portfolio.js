@@ -4,8 +4,9 @@ export const portfolio = {
   // ============================================================
   metadata: {
     name: "Junaidul Islam Jarif",
-    title: "Backend Developer",
-    tagline: "I build scalable, robust backend systems and APIs for the web.",
+    title: "Full Stack Developer",
+    tagline:
+      "I build responsive web experiences and scalable backend systems end-to-end.",
     email: "xjarifx@gmail.com",
 
     // Social links - displayed in sidebar footer
@@ -32,9 +33,9 @@ export const portfolio = {
       type: "text",
       title: "About",
       content: [
-        "I'm a backend developer focused on building clean, reliable APIs and data-driven systems. I enjoy turning requirements into well-structured services that are easy to maintain and scale.",
-        "Right now, I'm learning deeply through personal projects with Node.js, Express, and PostgreSQL while exploring system design fundamentals and backend best practices.",
-        "I care about clarity, performance, and developer experience, and I like documenting what I build so others can understand and extend it easily.",
+        "I'm a full stack developer focused on building clean, responsive interfaces and reliable APIs. I enjoy turning ideas into complete products that are easy to use, maintain, and scale.",
+        "I build projects with React on the frontend and Node.js, Express, and PostgreSQL on the backend, while continuously improving my system design and architecture skills.",
+        "I care about clarity, performance, and developer experience across the full stack, and I document what I build so teams can extend it confidently.",
       ],
     },
 
@@ -48,70 +49,42 @@ export const portfolio = {
       title: "Projects",
       items: [
         {
-          title: "E-Commerce REST API",
+          title: "Full Stack Social Media Platform",
           description:
-            "A robust RESTful API for an e-commerce platform with user authentication, product management, order processing, and payment integration.",
+            "A complete social media web application where users can create posts, follow profiles, react, comment, and chat in real time.",
           highlights: [
-            "Implemented JWT-based authentication with refresh token rotation",
-            "Optimized database queries reducing response time by 60%",
-            "Built comprehensive API documentation with Postman collections",
+            "Built secure authentication with JWT, protected routes, and role-based permissions",
+            "Implemented real-time messaging and notifications using Socket.io",
+            "Designed scalable REST APIs with optimized queries and pagination",
           ],
-          techStack: ["Node.js", "Express", "PostgreSQL", "Redis", "Stripe"],
+          techStack: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io"],
           links: [
             {
               label: "GitHub",
-              url: "https://github.com/xjarifx/ecommerce-api",
-            },
-            {
-              label: "Postman",
-              url: "https://www.postman.com/collections/ecommerce-api",
+              url: "https://github.com/xjarifx/social-network",
             },
           ],
-          image: "/projects/ecommerce.svg",
         },
         {
-          title: "Task Management System",
+          title: "Flower Shop Frontend",
           description:
-            "A collaborative task management API with real-time updates, team workspaces, and advanced filtering capabilities.",
+            "A modern, responsive flower shop frontend with product showcases, category filtering, cart preview, and smooth mobile-first UI.",
           highlights: [
-            "Designed scalable database schema supporting multi-tenancy",
-            "Integrated WebSocket for real-time notifications",
-            "Implemented role-based access control (RBAC) system",
+            "Created reusable UI components and clean page composition",
+            "Implemented responsive layouts and accessible interactions",
+            "Optimized loading performance and visual consistency across devices",
           ],
-          techStack: ["Node.js", "Express", "MongoDB", "Socket.io", "Docker"],
+          techStack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
           links: [
             {
               label: "GitHub",
-              url: "https://github.com/xjarifx/task-manager-api",
+              url: "https://github.com/xjarifx/flower-shop",
             },
             {
-              label: "Live Demo",
-              url: "https://task-api-demo.herokuapp.com",
+              label: "Live Preview",
+              url: "https://flower-shop-mauve-tau.vercel.app/",
             },
           ],
-          image: "/projects/taskmanager.svg",
-        },
-        {
-          title: "Blog API with CMS",
-          description:
-            "A full-featured blogging platform API with content management, media handling, and SEO optimization features.",
-          highlights: [
-            "Built RESTful endpoints with pagination and filtering",
-            "Implemented file upload system with image optimization",
-            "Added full-text search using PostgreSQL",
-          ],
-          techStack: ["Node.js", "Express", "PostgreSQL", "AWS S3", "Jest"],
-          links: [
-            {
-              label: "GitHub",
-              url: "https://github.com/xjarifx/blog-api",
-            },
-            {
-              label: "API Docs",
-              url: "https://blog-api-docs.vercel.app",
-            },
-          ],
-          image: "/projects/blog.svg",
         },
       ],
     },
@@ -125,108 +98,40 @@ export const portfolio = {
       title: "Articles",
       items: [
         {
-          title: "Building Scalable REST APIs with Node.js and PostgreSQL",
+          title: "Why the Internet’s Security Actually Depends on a 1970s Toy",
           summary:
-            "A comprehensive guide to designing and implementing production-ready REST APIs with proper error handling, validation, and database optimization techniques.",
-          date: "2026-01-15",
-          url: "https://dev.to/xjarifx/scalable-rest-apis",
-          tags: ["Node.js", "PostgreSQL", "API Design", "Backend"],
-          image: "/articles/rest-api.svg",
-        },
-        {
-          title: "Understanding JWT Authentication: Best Practices",
-          summary:
-            "Deep dive into JWT-based authentication, covering token storage, refresh token rotation, and security considerations for modern web applications.",
-          date: "2025-12-20",
-          url: "https://medium.com/@xjarifx/jwt-authentication",
-          tags: ["Security", "Authentication", "JWT", "Backend"],
-          image: "/articles/jwt.svg",
-        },
-        {
-          title: "Database Indexing Strategies for Better Performance",
-          summary:
-            "Learn how to optimize database queries using proper indexing strategies, with practical examples and performance benchmarks.",
-          date: "2025-11-10",
-          url: "https://hashnode.com/@xjarifx/database-indexing",
-          tags: ["Database", "PostgreSQL", "Performance", "SQL"],
-          image: "/articles/database.svg",
-        },
-        {
-          title: "Building a Rate Limiter with Redis",
-          summary:
-            "Step-by-step guide to implementing a distributed rate limiting system using Redis to protect your APIs from abuse.",
-          date: "2025-10-05",
-          url: "https://dev.to/xjarifx/rate-limiter-redis",
-          tags: ["Redis", "Node.js", "API Security", "Backend"],
-          image: "/articles/redis.svg",
+            "A practical story about why modern encryption still depends on real-world randomness, from Cloudflare’s lava lamps to chaos-based entropy sources.",
+          date: "2026-03-01",
+          url: "https://medium.com/@xjarifx/why-the-internets-security-actually-depends-on-a-1970s-toy-7d73b2618e79",
+          tags: [
+            "Software Development",
+            "Cloudflare",
+            "Cybersecurity",
+            "Lava Lamp",
+          ],
         },
       ],
     },
 
     // ========== CERTIFICATIONS SECTION ==========
     // Type: 'certification' - Professional certifications and courses
-    // Structure: List of certifications with name, issuer, date, credential URL, and skills
     {
       id: "certifications",
       type: "certification",
       title: "Certifications",
       items: [
         {
-          name: "AWS Certified Solutions Architect – Associate",
-          issuer: "Amazon Web Services",
-          date: "Jan 2026",
+          name: "AWS Academy Cloud Foundations",
+          issuer: "Amazon Web Services Academy",
+          date: "2026",
           description:
-            "Validated expertise in designing distributed systems on AWS with focus on security, reliability, and cost optimization.",
-          credentialId: "AWS-ASA-123456",
-          credentialUrl: "https://aws.amazon.com/verification",
-          skills: ["AWS", "Cloud Architecture", "EC2", "S3", "RDS", "Lambda"],
-        },
-        {
-          name: "Node.js Application Developer Certification",
-          issuer: "OpenJS Foundation",
-          date: "Oct 2025",
-          description:
-            "Demonstrated proficiency in Node.js core concepts, asynchronous programming, and building production-grade applications.",
-          credentialId: "JSNAD-789012",
-          credentialUrl: "https://openjsf.org/certification",
+            "Completed foundational cloud training covering AWS core services, cloud concepts, security, architecture, and pricing.",
+          credentialUrl: "/certificates/aws.pdf",
           skills: [
-            "Node.js",
-            "Express",
-            "Async/Await",
-            "Event Loop",
-            "Streams",
-          ],
-        },
-        {
-          name: "MongoDB Certified Developer Associate",
-          issuer: "MongoDB University",
-          date: "Aug 2025",
-          description:
-            "Certified in MongoDB fundamentals including data modeling, aggregation framework, and performance optimization.",
-          credentialId: "MDB-DEV-345678",
-          credentialUrl: "https://university.mongodb.com/certification",
-          skills: [
-            "MongoDB",
-            "NoSQL",
-            "Aggregation",
-            "Indexing",
-            "Data Modeling",
-          ],
-        },
-        {
-          name: "Docker Certified Associate",
-          issuer: "Mirantis",
-          date: "Jun 2025",
-          description:
-            "Validated skills in containerization, orchestration, and deploying applications using Docker and Docker Compose.",
-          credentialId: "DCA-901234",
-          credentialUrl: "https://www.mirantis.com/certification",
-          skills: [
-            "Docker",
-            "Containerization",
-            "Docker Compose",
-            "Networking",
-            "Volumes",
+            "AWS",
+            "Cloud Computing",
+            "Cloud Security",
+            "Core AWS Services",
           ],
         },
       ],

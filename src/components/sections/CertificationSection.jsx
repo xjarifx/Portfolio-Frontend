@@ -7,17 +7,11 @@ import { Badge } from "../ui/Badge";
 const CertificationItem = ({ cert, theme }) => {
   return (
     <li className={theme.spacing.itemGap}>
-      <div className="group relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:group-hover/list:opacity-50 lg:hover:!opacity-100">
+      <div className="group relative grid pb-1 transition-all lg:group-hover/list:opacity-50 lg:hover:opacity-100!">
         <div
           className={`absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block ${theme.colors.hoverOverlay} lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg`}
         ></div>
-        <header
-          className={`z-10 mt-1 mb-2 ${theme.typography.label} ${theme.colors.textMuted} sm:col-span-2`}
-          aria-label={`Issued ${cert.date}`}
-        >
-          {cert.date}
-        </header>
-        <div className="z-10 sm:col-span-6">
+        <div className="z-10">
           <h3
             className={`leading-snug font-medium ${theme.colors.textPrimary}`}
           >
@@ -57,6 +51,14 @@ const CertificationItem = ({ cert, theme }) => {
               </a>
             </div>
           </h3>
+          {cert.date && (
+            <p
+              className={`mt-1 text-xs ${theme.colors.textMuted}`}
+              aria-label={`Issued ${cert.date}`}
+            >
+              {cert.date}
+            </p>
+          )}
           {cert.description && (
             <p className={`${theme.spacing.contentGap} text-sm leading-normal`}>
               {cert.description}

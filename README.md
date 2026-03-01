@@ -1,1 +1,0 @@
-This portfolio is currently under construction. Most of the content is placeholder and not final.

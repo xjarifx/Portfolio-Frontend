@@ -72,7 +72,7 @@ export const Header = ({
         {/* Resume Download Button */}
         <div className="mt-4">
           <a
-            href="/pdf/resume.pdf"
+            href="/resume/resume.pdf"
             target="_blank"
             rel="noreferrer noopener"
             className={`inline-flex items-center gap-2 rounded border border-slate-600/60 px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} hover:border-slate-400/80 hover:${theme.colors.accent} cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-teal-300/70 focus-visible:outline-none`}
