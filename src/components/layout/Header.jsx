@@ -24,7 +24,7 @@ export const Header = ({
           <a
             href="#about"
             onClick={(e) => onNavClick(e, "about")}
-            className={`hover:${theme.colors.accent} transition-colors cursor-pointer`}
+            className={`hover:${theme.colors.accent} cursor-pointer transition-colors`}
           >
             {metadata.name}
           </a>
@@ -42,7 +42,7 @@ export const Header = ({
             <Button
               onClick={handleCopyEmail}
               size="md"
-              className="py-1.5 px-3"
+              className="px-3 py-1.5"
               aria-label={`Copy email ${metadata.email}`}
               title="Click to copy"
             >
@@ -75,7 +75,7 @@ export const Header = ({
             href="/pdf/resume.pdf"
             target="_blank"
             rel="noreferrer noopener"
-            className={`inline-flex items-center gap-2 rounded border border-slate-600/60 px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} hover:border-slate-400/80 hover:${theme.colors.accent} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-300/70 transition-colors cursor-pointer`}
+            className={`inline-flex items-center gap-2 rounded border border-slate-600/60 px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} hover:border-slate-400/80 hover:${theme.colors.accent} cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-teal-300/70 focus-visible:outline-none`}
             aria-label="View resume PDF"
           >
             View Resume
@@ -102,7 +102,7 @@ export const Header = ({
  */
 const Navigation = ({ sections, activeSection, onNavClick, theme }) => {
   return (
-    <nav className="nav hidden lg:block mt-16" aria-label="In-page jump links">
+    <nav className="nav mt-16 hidden lg:block" aria-label="In-page jump links">
       <ul className="mt-16 w-max">
         {sections.map((section) => (
           <li key={section.id}>
@@ -193,9 +193,9 @@ const SocialLinks = ({ metadata, theme }) => {
   };
 
   return (
-    <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
+    <ul className="mt-8 ml-1 flex items-center" aria-label="Social media">
       {metadata.email && (
-        <li className="mr-5 text-xs shrink-0">
+        <li className="mr-5 shrink-0 text-xs">
           <a
             className={`block ${theme.colors.text} hover:${theme.colors.accent} transition-colors`}
             href={`mailto:${metadata.email}`}
@@ -208,7 +208,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.github && (
-        <li className="mr-5 text-xs shrink-0">
+        <li className="mr-5 shrink-0 text-xs">
           <a
             className={`block ${theme.colors.text} hover:${theme.colors.accent} transition-colors`}
             href={metadata.social.github}
@@ -223,7 +223,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.linkedin && (
-        <li className="mr-5 text-xs shrink-0">
+        <li className="mr-5 shrink-0 text-xs">
           <a
             className={`block ${theme.colors.text} hover:${theme.colors.accent} transition-colors`}
             href={metadata.social.linkedin}
@@ -238,7 +238,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.leetcode && (
-        <li className="mr-5 text-xs shrink-0">
+        <li className="mr-5 shrink-0 text-xs">
           <a
             className={`block ${theme.colors.text} hover:${theme.colors.accent} transition-colors`}
             href={metadata.social.leetcode}
@@ -253,7 +253,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.medium && (
-        <li className="mr-5 text-xs shrink-0">
+        <li className="mr-5 shrink-0 text-xs">
           <a
             className={`block ${theme.colors.text} hover:${theme.colors.accent} transition-colors`}
             href={metadata.social.medium}
