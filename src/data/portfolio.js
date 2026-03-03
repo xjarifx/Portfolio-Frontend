@@ -49,7 +49,7 @@ export const portfolio = {
       title: "Projects",
       items: [
         {
-          title: "Firewatch-Inspired Parallax Landing Page",
+          title: "Fire Watch",
           description:
             "A simple parallax website inspired by the Firewatch game landing page, focused on layered scrolling visuals and immersive storytelling.",
           highlights: [
@@ -70,7 +70,7 @@ export const portfolio = {
           ],
         },
         {
-          title: "Full Stack Social Media Platform",
+          title: "Social Network",
           description:
             "A complete social media web application where users can create posts, follow profiles, react, comment, and chat in real time.",
           highlights: [
@@ -87,7 +87,7 @@ export const portfolio = {
           ],
         },
         {
-          title: "Flower Shop Frontend",
+          title: "Our Bloom",
           description:
             "A modern, responsive flower shop frontend with product showcases, category filtering, cart preview, and smooth mobile-first UI.",
           highlights: [
