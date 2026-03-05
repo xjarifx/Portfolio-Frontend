@@ -108,6 +108,27 @@ export const portfolio = {
             },
           ],
         },
+        {
+          title: "Slack Landing Page",
+          description:
+            "A modern, modular Next.js landing page inspired by Slack, built with TypeScript, Tailwind CSS, and reusable components.",
+          highlights: [
+            "Built a modular component library with 8 reusable components, reducing code duplication by ~70%",
+            "Type-safe props and consistent styling via shared constants and SectionHeading, Accordion, Button patterns",
+            "Production-ready structure with separation of concerns, accessibility, and responsive design",
+          ],
+          techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+          links: [
+            {
+              label: "GitHub",
+              url: "https://github.com/xjarifx/slack-landing-page",
+            },
+            {
+              label: "Live Preview",
+              url: "https://slack-landing-page-two.vercel.app/",
+            },
+          ],
+        },
       ],
     },
 
@@ -119,6 +140,20 @@ export const portfolio = {
       type: "article",
       title: "Articles",
       items: [
+        {
+          title:
+            "System Design Is Not About Systems, It's About Thinking in Constraints",
+          summary:
+            "A reframe of system design as a mindset: working within constraints, making trade-offs, and reasoning about scale, reliability, and clarity—not just drawing boxes.",
+          date: "2026-03-05",
+          url: "https://medium.com/@xjarifx/system-design-is-not-about-systems-its-about-thinking-in-constraints-67d495af61d1",
+          tags: [
+            "System Design",
+            "Software Architecture",
+            "Constraints",
+            "Engineering",
+          ],
+        },
         {
           title:
             "Attention Is All You Need: How Transformers Rewired AI — And What Comes Next",
@@ -174,15 +209,18 @@ export const portfolio = {
     },
 
     // ========== EDUCATION SECTION ==========
-    // Type: 'education' - Academic background with glass effect
+    // Type: 'education' - Academic background with structured items
     {
       id: "education",
       type: "education",
       title: "Education",
-      content: [
-        "B.Sc. in Computer Science and Engineering (CSE)",
-        "Daffodil International University",
-        "3.1/4.0 CGPA (2023-2027)",
+      items: [
+        {
+          degree: "B.Sc. in Computer Science and Engineering (CSE)",
+          institution: "Daffodil International University",
+          period: "2023–2027",
+          gpa: "3.1/4.0 CGPA",
+        },
       ],
     },
 

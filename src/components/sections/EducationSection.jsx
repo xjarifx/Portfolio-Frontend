@@ -4,25 +4,48 @@ import { ThemePropType } from "../../types";
 
 /**
  * EducationSection component
- * Renders education items with glass effect styling
+ * Renders education entries with degree, institution, period, and GPA
  */
-export const EducationSection = ({ content }) => {
+export const EducationSection = ({ items, theme }) => {
   return (
-    <div className="group/list">
-      <Card>
-        <div className="relative z-10 space-y-1">
-          {content.map((line, index) => (
-            <p key={`education-${index}`} className="text-sm leading-relaxed">
-              {line}
-            </p>
-          ))}
-        </div>
-      </Card>
-    </div>
+    <ul className="group/list">
+      {items.map((entry, index) => (
+        <li key={`education-${index}`} className={theme.spacing.itemGap}>
+          <Card>
+            <div className="relative z-10 space-y-1.5">
+              <h3
+                className={`font-medium ${theme.colors.textPrimary} text-base leading-tight`}
+              >
+                {entry.degree}
+              </h3>
+              <p
+                className={`text-sm ${theme.colors.text} leading-relaxed`}
+              >
+                {entry.institution}
+              </p>
+              <p
+                className={`text-xs ${theme.colors.textMuted} leading-relaxed`}
+                aria-label="Period and grade"
+              >
+                {entry.period}
+                {entry.gpa ? ` · ${entry.gpa}` : ""}
+              </p>
+            </div>
+          </Card>
+        </li>
+      ))}
+    </ul>
   );
 };
 
 EducationSection.propTypes = {
-  content: PropTypes.arrayOf(PropTypes.string).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      degree: PropTypes.string.isRequired,
+      institution: PropTypes.string.isRequired,
+      period: PropTypes.string.isRequired,
+      gpa: PropTypes.string,
+    })
+  ).isRequired,
   theme: ThemePropType.isRequired,
 };

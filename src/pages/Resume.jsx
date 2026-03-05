@@ -189,16 +189,25 @@ function Resume() {
           </section>
         )}
 
-        {educationSection?.content?.length > 0 && (
+        {educationSection?.items?.length > 0 && (
           <section className="mt-7">
             <h2
               className={`text-sm font-semibold tracking-widest uppercase ${theme.colors.textPrimary}`}
             >
               Education
             </h2>
-            <div className="mt-2 space-y-1 text-sm">
-              {educationSection.content.map((line, index) => (
-                <p key={`education-${index}`}>{line}</p>
+            <div className="mt-2 space-y-3 text-sm">
+              {educationSection.items.map((entry, index) => (
+                <div key={`education-${index}`}>
+                  <p className={`font-medium ${theme.colors.textPrimary}`}>
+                    {entry.degree}
+                  </p>
+                  <p className={theme.colors.text}>{entry.institution}</p>
+                  <p className={theme.colors.textMuted}>
+                    {entry.period}
+                    {entry.gpa ? ` · ${entry.gpa}` : ""}
+                  </p>
+                </div>
               ))}
             </div>
           </section>

@@ -24,7 +24,7 @@ export const MainContent = ({ sections, theme, config }) => {
       case "certification":
         return <CertificationSection items={section.items} theme={theme} />;
       case "education":
-        return <EducationSection content={section.content} theme={theme} />;
+        return <EducationSection items={section.items} theme={theme} />;
       default:
         return null;
     }
