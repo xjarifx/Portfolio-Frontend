@@ -4,7 +4,7 @@ export const portfolio = {
   // ============================================================
   metadata: {
     name: "Junaidul Islam Jarif",
-    title: "Full-Stack Developer",
+    title: "Software Engineer",
     tagline:
       "I build responsive web experiences and scalable backend systems end-to-end.",
     email: "xjarifx@gmail.com",
@@ -34,7 +34,7 @@ export const portfolio = {
       type: "text",
       title: "Summary",
       content: [
-        "Full-stack developer building responsive web experiences and scalable backend systems with React, Node.js, and PostgreSQL.",
+        "Software engineer building responsive web experiences and scalable backend systems with React, Node.js, and PostgreSQL.",
       ],
     },
 
@@ -82,6 +82,10 @@ export const portfolio = {
             {
               label: "GitHub",
               url: "https://github.com/xjarifx/social-network",
+            },
+            {
+              label: "Live Preview",
+              url: "https://social-network-ten-ruby.vercel.app/",
             },
           ],
         },
