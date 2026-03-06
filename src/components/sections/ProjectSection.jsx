@@ -18,7 +18,7 @@ const ProjectItem = ({ project, theme }) => {
               width="200"
               height="48"
               decoding="async"
-              className="rounded border border-gray-200 bg-white transition group-hover:border-gray-300"
+              className="rounded border border-gray-700 bg-gray-800 transition group-hover:border-gray-600"
               src={project.image}
               onError={(e) => {
                 e.target.style.display = "none";

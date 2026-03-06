@@ -12,8 +12,8 @@ export const Badge = ({
   ...props
 }) => {
   const variants = {
-    accent: "bg-purple-50 text-purple-700 border border-purple-200",
-    default: "bg-gray-100 text-gray-700 border border-gray-200",
+    accent: "bg-purple-950/50 text-purple-300 border border-purple-800",
+    default: "bg-gray-800 text-gray-300 border border-gray-600",
   };
 
   return (

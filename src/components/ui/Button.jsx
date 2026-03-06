@@ -16,13 +16,13 @@ export const Button = ({
   ...props
 }) => {
   const baseStyles =
-    "inline-flex items-center gap-2 rounded-md transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed";
+    "inline-flex items-center gap-2 rounded-md transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-950 disabled:opacity-50 disabled:cursor-not-allowed";
 
   const variants = {
     default:
-      "border border-gray-200 bg-white text-gray-900 hover:bg-gray-50 hover:border-gray-300",
+      "border border-gray-600 bg-gray-800 text-gray-100 hover:bg-gray-700 hover:border-gray-500",
     accent:
-      "border border-purple-200 bg-purple-50 text-purple-700 hover:bg-purple-100 hover:border-purple-300",
+      "border border-purple-800 bg-purple-950/50 text-purple-300 hover:bg-purple-900/50 hover:border-purple-700",
   };
 
   const sizes = {

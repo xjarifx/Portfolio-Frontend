@@ -17,7 +17,7 @@ function Resume() {
     <main
       className={`resume-page min-h-screen ${theme.colors.background} ${theme.colors.text} px-4 py-8 md:px-8 md:py-12`}
     >
-      <div className={`mx-auto w-full max-w-4xl rounded-lg border ${theme.colors.border} bg-white p-6 md:p-10 print:max-w-none print:rounded-none print:border-0 print:bg-transparent print:p-0 shadow-sm`}>
+      <div className={`mx-auto w-full max-w-4xl rounded-lg border ${theme.colors.border} ${theme.colors.surface} p-6 md:p-10 print:max-w-none print:rounded-none print:border-0 print:bg-transparent print:p-0 shadow-sm`}>
         <header className={`border-b ${theme.colors.border} pb-5`}>
           <h1 className={`text-3xl font-bold ${theme.colors.textPrimary}`}>
             {metadata.name}
@@ -63,13 +63,13 @@ function Resume() {
             <button
               type="button"
               onClick={() => window.print()}
-              className={`inline-flex cursor-pointer items-center rounded-md border ${theme.colors.border} bg-white px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} hover:bg-gray-50 hover:border-gray-300 ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500`}
+              className={`inline-flex cursor-pointer items-center rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500`}
             >
               Download as PDF
             </button>
             <Link
               to="/"
-              className={`inline-flex items-center rounded-md border ${theme.colors.border} bg-white px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} hover:bg-gray-50 hover:border-gray-300 ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500`}
+              className={`inline-flex items-center rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500`}
             >
               Back to Portfolio
             </Link>
