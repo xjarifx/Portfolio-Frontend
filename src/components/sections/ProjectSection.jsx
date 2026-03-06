@@ -27,13 +27,28 @@ const ProjectItem = ({ project, theme }) => {
           </div>
         )}
         <div className="z-10">
-          <h3
-            className={`leading-tight font-medium ${theme.colors.textPrimary} text-lg`}
-          >
-            {project.title}
-          </h3>
-          <p className={`${theme.spacing.contentGap} text-base leading-normal`}>
-            {project.description}
+          <div className="flex items-center justify-between gap-3 flex-wrap">
+            <h3
+              className={`leading-tight font-medium ${theme.colors.textPrimary} text-lg`}
+            >
+              {project.title}
+            </h3>
+            {project.links && project.links.length > 0 && (
+              <div className="flex gap-2">
+                {project.links.map((link, linkIndex) => (
+                  <ExternalLink
+                    key={`${project.title}-link-${linkIndex}`}
+                    href={link.url}
+                    label={`${link.label} for ${project.title}`}
+                  >
+                    {link.label}
+                  </ExternalLink>
+                ))}
+              </div>
+            )}
+          </div>
+          <p className={`mt-1 text-sm ${theme.colors.textMuted}`}>
+            {project.techStack.join(' · ')}
           </p>
           {project.highlights && project.highlights.length > 0 && (
             <ul
@@ -46,32 +61,6 @@ const ProjectItem = ({ project, theme }) => {
               ))}
             </ul>
           )}
-          {project.links && project.links.length > 0 && (
-            <div className={`${theme.spacing.contentGap} flex flex-wrap gap-2`}>
-              {project.links.map((link, linkIndex) => (
-                <ExternalLink
-                  key={`${project.title}-link-${linkIndex}`}
-                  href={link.url}
-                  label={`${link.label} for ${project.title}`}
-                >
-                  {link.label}
-                </ExternalLink>
-              ))}
-            </div>
-          )}
-          <ul
-            className={`${theme.spacing.contentGap} flex flex-wrap`}
-            aria-label="Technologies used"
-          >
-            {project.techStack.map((tech, techIndex) => (
-              <li
-                key={`${project.title}-tech-${techIndex}`}
-                className="mt-2 mr-1.5"
-              >
-                <Badge>{tech}</Badge>
-              </li>
-            ))}
-          </ul>
         </div>
       </Card>
     </li>

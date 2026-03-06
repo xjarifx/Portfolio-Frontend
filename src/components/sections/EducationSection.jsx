@@ -23,13 +23,6 @@ export const EducationSection = ({ items, theme }) => {
               >
                 {entry.institution}
               </p>
-              <p
-                className={`text-sm ${theme.colors.textMuted} leading-relaxed`}
-                aria-label="Period and grade"
-              >
-                {entry.period}
-                {entry.gpa ? ` · ${entry.gpa}` : ""}
-              </p>
             </div>
           </Card>
         </li>

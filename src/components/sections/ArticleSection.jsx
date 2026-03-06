@@ -44,11 +44,6 @@ const ArticleItem = ({ article, theme }) => {
               <span className="text-lg">{article.title}</span>
             )}
           </h3>
-          {article.date && (
-            <p className={`mt-1 text-sm ${theme.colors.textMuted}`}>
-              {formatDate(article.date)}
-            </p>
-          )}
           {article.summary && (
             <p className={`${theme.spacing.contentGap} text-base leading-normal`}>
               {article.summary}

@@ -30,26 +30,6 @@ const CertificationItem = ({ cert, theme }) => {
               </CardLink>
             </div>
           </h3>
-          {cert.date && (
-            <p
-              className={`mt-1 text-sm ${theme.colors.textMuted}`}
-              aria-label={`Issued ${cert.date}`}
-            >
-              {getYear(cert.date)}
-            </p>
-          )}
-          {cert.description && (
-            <p className={`${theme.spacing.contentGap} text-base leading-normal`}>
-              {cert.description}
-            </p>
-          )}
-          {cert.credentialId && (
-            <p
-              className={`${theme.spacing.contentGap} text-sm ${theme.colors.textMuted}`}
-            >
-              Credential ID: {cert.credentialId}
-            </p>
-          )}
           {cert.skills && cert.skills.length > 0 && (
             <ul
               className={`${theme.spacing.contentGap} flex flex-wrap`}
