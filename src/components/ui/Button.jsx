@@ -20,9 +20,9 @@ export const Button = ({
 
   const variants = {
     default:
-      "border border-gray-600 bg-gray-800 text-gray-100 hover:bg-gray-700 hover:border-gray-500",
+      "bg-gray-800 text-gray-100 hover:bg-gray-700",
     accent:
-      "border border-purple-800 bg-purple-950/50 text-purple-300 hover:bg-purple-900/50 hover:border-purple-700",
+      "bg-purple-950/50 text-purple-300 hover:bg-purple-900/50",
   };
 
   const sizes = {

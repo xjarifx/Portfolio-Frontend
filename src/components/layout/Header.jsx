@@ -128,26 +128,26 @@ const ContactSection = ({
   if (!hasContact) return null;
 
   return (
-    <section className={`mt-8 max-w-md rounded-lg border ${theme.colors.border} ${theme.colors.surface} p-4`}>
+    <section className="mt-8 max-w-md">
       <h3 className={`text-xs font-semibold tracking-widest uppercase ${theme.colors.textMuted}`}>
         Contact
       </h3>
 
-      <div className="mt-3 space-y-3">
+      <div className="mt-3 space-y-4">
         {metadata.email && (
           <div>
             <p className={`text-xs ${theme.colors.textMuted}`}>Email</p>
-            <div className="mt-1 flex flex-wrap items-center gap-2">
+            <div className="mt-1 grid grid-cols-[1fr_auto_auto] items-center gap-x-2 gap-y-1">
               <a
                 href={`mailto:${metadata.email}`}
-                className={`text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
+                className={`min-w-0 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
               >
                 {metadata.email}
               </a>
               <Button
                 onClick={onCopyEmail}
                 size="sm"
-                className="px-2 py-1"
+                className="shrink-0 px-2 py-1"
                 aria-label={`Copy email ${metadata.email}`}
                 title="Copy email"
               >
@@ -165,10 +165,10 @@ const ContactSection = ({
         {metadata.phone && (
           <div>
             <p className={`text-xs ${theme.colors.textMuted}`}>Phone</p>
-            <div className="mt-1 flex flex-wrap items-center gap-2">
+            <div className="mt-1 grid grid-cols-[1fr_auto_auto] items-center gap-x-2 gap-y-1">
               <a
                 href={`tel:${metadata.phone.replace(/\s+/g, "")}`}
-                className={`text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
+                className={`min-w-0 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
                 aria-label={`Call ${metadata.phone}`}
               >
                 {metadata.phone}
@@ -176,7 +176,7 @@ const ContactSection = ({
               <Button
                 onClick={onCopyPhone}
                 size="sm"
-                className="px-2 py-1"
+                className="shrink-0 px-2 py-1"
                 aria-label={`Copy phone number ${metadata.phone}`}
                 title="Copy phone"
               >

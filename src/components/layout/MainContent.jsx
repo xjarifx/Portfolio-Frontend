@@ -48,7 +48,7 @@ export const MainContent = ({ sections, theme, config }) => {
       ))}
 
       {/* Attribution Footer */}
-      <footer className={`mt-16 sm:mt-24 border-t ${theme.colors.border} pt-8`}>
+      <footer className="mt-16 sm:mt-24 pt-8">
         <p className={`text-xs ${theme.colors.textMuted}`}>
           Design inspired by{" "}
           <a

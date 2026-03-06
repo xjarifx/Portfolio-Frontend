@@ -19,7 +19,7 @@ const ArticleItem = ({ article, theme }) => {
               width="200"
               height="120"
               decoding="async"
-              className="rounded border border-gray-700 bg-gray-800 transition group-hover:border-gray-600 sm:order-1 sm:col-span-2 sm:translate-y-1"
+              className="rounded bg-gray-800 transition sm:order-1 sm:col-span-2 sm:translate-y-1"
               src={article.image}
               onError={(e) => {
                 e.target.style.display = "none";
