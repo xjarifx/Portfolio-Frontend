@@ -49,7 +49,7 @@ export const MainContent = ({ sections, theme, config }) => {
 
       {/* Attribution Footer */}
       <footer className="mt-16 sm:mt-24 pt-8">
-        <p className={`text-xs ${theme.colors.textMuted}`}>
+        <p className={`text-sm ${theme.colors.textMuted}`}>
           Design inspired by{" "}
           <a
             className={`font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}

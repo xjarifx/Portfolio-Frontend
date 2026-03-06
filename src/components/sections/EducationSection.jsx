@@ -14,17 +14,17 @@ export const EducationSection = ({ items, theme }) => {
           <Card>
             <div className="relative z-10 space-y-1.5">
               <h3
-                className={`font-medium ${theme.colors.textPrimary} text-base leading-tight`}
+                className={`font-medium ${theme.colors.textPrimary} text-lg leading-tight`}
               >
                 {entry.degree}
               </h3>
               <p
-                className={`text-sm ${theme.colors.text} leading-relaxed`}
+                className={`text-base ${theme.colors.text} leading-relaxed`}
               >
                 {entry.institution}
               </p>
               <p
-                className={`text-xs ${theme.colors.textMuted} leading-relaxed`}
+                className={`text-sm ${theme.colors.textMuted} leading-relaxed`}
                 aria-label="Period and grade"
               >
                 {entry.period}

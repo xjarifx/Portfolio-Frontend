@@ -29,7 +29,7 @@ export const theme = {
   },
   typography: {
     heading: "text-3xl font-bold tracking-tight text-gray-100 sm:text-4xl md:text-5xl",
-    subheading: "text-lg font-medium tracking-tight text-gray-100 sm:text-xl",
-    label: "text-xs font-semibold uppercase tracking-widest text-gray-500",
+    subheading: "text-xl font-medium tracking-tight text-gray-100 sm:text-2xl",
+    label: "text-sm font-semibold uppercase tracking-widest text-gray-500",
   },
 };

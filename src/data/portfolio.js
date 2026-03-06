@@ -34,9 +34,7 @@ export const portfolio = {
       type: "text",
       title: "Summary",
       content: [
-        "I'm a full stack developer focused on building clean, responsive interfaces and reliable APIs. I enjoy turning ideas into complete products that are easy to use, maintain, and scale.",
-        "I build projects with React on the frontend and Node.js, Express, and PostgreSQL on the backend, while continuously improving my system design and architecture skills.",
-        "I care about clarity, performance, and developer experience across the full stack, and I document what I build so teams can extend it confidently.",
+        "Full-stack developer building responsive web experiences and scalable backend systems with React, Node.js, and PostgreSQL.",
       ],
     },
 

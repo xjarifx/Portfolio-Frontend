@@ -41,16 +41,16 @@ const ArticleItem = ({ article, theme }) => {
                 {article.title}
               </CardLink>
             ) : (
-              <span className="text-base">{article.title}</span>
+              <span className="text-lg">{article.title}</span>
             )}
           </h3>
           {article.date && (
-            <p className={`mt-1 text-xs ${theme.colors.textMuted}`}>
+            <p className={`mt-1 text-sm ${theme.colors.textMuted}`}>
               {formatDate(article.date)}
             </p>
           )}
           {article.summary && (
-            <p className={`${theme.spacing.contentGap} text-sm leading-normal`}>
+            <p className={`${theme.spacing.contentGap} text-base leading-normal`}>
               {article.summary}
             </p>
           )}

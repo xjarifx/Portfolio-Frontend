@@ -1,9 +1,10 @@
 import { useEmailCopy } from "../../hooks/useEmailCopy";
 import { Button } from "../ui/Button";
+import { ResumeButton } from "../resume/ResumeButton";
 
 /**
  * Header component
- * Left sidebar with metadata, social links, and download button
+ * Left sidebar with metadata, social links, and resume button
  */
 export const Header = ({
   metadata,
@@ -15,7 +16,6 @@ export const Header = ({
   const { emailCopied, handleCopyEmail } = useEmailCopy(metadata.email);
   const { emailCopied: phoneCopied, handleCopyEmail: handleCopyPhone } =
     useEmailCopy(metadata.phone);
-  const resumeHref = `${import.meta.env.BASE_URL}resume`;
 
   return (
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
@@ -33,7 +33,7 @@ export const Header = ({
         <h2 className={`mt-3 ${theme.typography.subheading}`}>
           {metadata.title}
         </h2>
-        <p className={`mt-4 max-w-xs leading-relaxed ${theme.colors.text}`}>
+        <p className={`mt-4 max-w-xs text-base leading-relaxed ${theme.colors.text}`}>
           {metadata.tagline}
         </p>
 
@@ -46,17 +46,14 @@ export const Header = ({
           onCopyPhone={handleCopyPhone}
         />
 
-        {/* Resume Download Button */}
+        {/* Resume - opens auto-generated PDF in new tab */}
         <div className="mt-4">
-          <a
-            href={resumeHref}
-            target="_blank"
-            rel="noreferrer noopener"
+          <ResumeButton
+            metadata={metadata}
+            sections={sections}
+            theme={theme}
             className={`inline-flex items-center gap-2 rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none`}
-            aria-label="Open generated resume"
-          >
-            Resume
-          </a>
+          />
         </div>
         <Navigation
           sections={sections}
@@ -129,18 +126,18 @@ const ContactSection = ({
 
   return (
     <section className="mt-8 max-w-md">
-      <h3 className={`text-xs font-semibold tracking-widest uppercase ${theme.colors.textMuted}`}>
+      <h3 className={`text-sm font-semibold tracking-widest uppercase ${theme.colors.textMuted}`}>
         Contact
       </h3>
 
       <div className="mt-3 space-y-4">
         {metadata.email && (
           <div>
-            <p className={`text-xs ${theme.colors.textMuted}`}>Email</p>
+            <p className={`text-sm ${theme.colors.textMuted}`}>Email</p>
             <div className="mt-1 grid grid-cols-[1fr_auto_auto] items-center gap-x-2 gap-y-1">
               <a
                 href={`mailto:${metadata.email}`}
-                className={`min-w-0 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
+                className={`min-w-0 text-base font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
               >
                 {metadata.email}
               </a>
@@ -154,7 +151,7 @@ const ContactSection = ({
                 Copy
               </Button>
               {emailCopied && (
-                <span className={`text-xs ${theme.colors.accent}`} aria-live="polite">
+                <span className={`text-sm ${theme.colors.accent}`} aria-live="polite">
                   Copied!
                 </span>
               )}
@@ -164,11 +161,11 @@ const ContactSection = ({
 
         {metadata.phone && (
           <div>
-            <p className={`text-xs ${theme.colors.textMuted}`}>Phone</p>
+            <p className={`text-sm ${theme.colors.textMuted}`}>Phone</p>
             <div className="mt-1 grid grid-cols-[1fr_auto_auto] items-center gap-x-2 gap-y-1">
               <a
                 href={`tel:${metadata.phone.replace(/\s+/g, "")}`}
-                className={`min-w-0 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
+                className={`min-w-0 text-base font-medium ${theme.colors.textPrimary} ${theme.colors.accentHover} transition-colors`}
                 aria-label={`Call ${metadata.phone}`}
               >
                 {metadata.phone}
@@ -184,7 +181,7 @@ const ContactSection = ({
               </Button>
               {phoneCopied && (
                 <span
-                  className={`text-xs ${theme.colors.accent}`}
+                  className={`text-sm ${theme.colors.accent}`}
                   aria-live="polite"
                 >
                   Copied!
@@ -248,7 +245,7 @@ const SocialLinks = ({ metadata, theme }) => {
   return (
     <ul className="mt-8 ml-1 flex items-center" aria-label="Social media">
       {metadata.social.github && (
-        <li className="mr-5 shrink-0 text-xs">
+        <li className="mr-5 shrink-0 text-sm">
           <a
             className={`block ${theme.colors.text} ${theme.colors.accentHover} transition-colors`}
             href={metadata.social.github}
@@ -263,7 +260,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.linkedin && (
-        <li className="mr-5 shrink-0 text-xs">
+        <li className="mr-5 shrink-0 text-sm">
           <a
             className={`block ${theme.colors.text} ${theme.colors.accentHover} transition-colors`}
             href={metadata.social.linkedin}
@@ -278,7 +275,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.leetcode && (
-        <li className="mr-5 shrink-0 text-xs">
+        <li className="mr-5 shrink-0 text-sm">
           <a
             className={`block ${theme.colors.text} ${theme.colors.accentHover} transition-colors`}
             href={metadata.social.leetcode}
@@ -293,7 +290,7 @@ const SocialLinks = ({ metadata, theme }) => {
         </li>
       )}
       {metadata.social.medium && (
-        <li className="mr-5 shrink-0 text-xs">
+        <li className="mr-5 shrink-0 text-sm">
           <a
             className={`block ${theme.colors.text} ${theme.colors.accentHover} transition-colors`}
             href={metadata.social.medium}

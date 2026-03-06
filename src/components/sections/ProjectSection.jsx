@@ -28,16 +28,16 @@ const ProjectItem = ({ project, theme }) => {
         )}
         <div className="z-10">
           <h3
-            className={`leading-tight font-medium ${theme.colors.textPrimary} text-base`}
+            className={`leading-tight font-medium ${theme.colors.textPrimary} text-lg`}
           >
             {project.title}
           </h3>
-          <p className={`${theme.spacing.contentGap} text-sm leading-normal`}>
+          <p className={`${theme.spacing.contentGap} text-base leading-normal`}>
             {project.description}
           </p>
           {project.highlights && project.highlights.length > 0 && (
             <ul
-              className={`${theme.spacing.contentGap} text-xs ${theme.colors.text}`}
+              className={`${theme.spacing.contentGap} text-sm ${theme.colors.text}`}
             >
               {project.highlights.map((highlight, hlIndex) => (
                 <li key={hlIndex} className="mb-1">

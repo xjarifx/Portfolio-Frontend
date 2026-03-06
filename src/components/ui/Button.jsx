@@ -26,7 +26,7 @@ export const Button = ({
   };
 
   const sizes = {
-    sm: "px-2.5 py-1 text-xs font-medium",
+    sm: "px-2.5 py-1 text-sm font-medium",
     md: "px-3 py-1.5 text-sm font-medium",
     lg: "px-4 py-2 text-base font-medium",
   };

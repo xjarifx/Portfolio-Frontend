@@ -3,6 +3,7 @@
 /* Dark theme base — no gradients, solid surfaces. Mobile-first. */
 html {
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 body {
@@ -39,13 +40,6 @@ body {
 
   .no-print {
     display: none !important;
-  }
-
-  .resume-page {
-    min-height: auto !important;
-    padding: 0 !important;
-    background: #ffffff !important;
-    color: #111827 !important;
   }
 
   a {

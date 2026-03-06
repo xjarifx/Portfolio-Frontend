@@ -9,7 +9,7 @@ export const TextSection = ({ content }) => {
   return (
     <div>
       {content.map((paragraph, index) => (
-        <p key={index} className="mb-4">
+        <p key={index} className="mb-4 text-base leading-relaxed">
           {paragraph}
         </p>
       ))}
