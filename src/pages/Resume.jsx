@@ -63,13 +63,13 @@ function Resume() {
             <button
               type="button"
               onClick={() => window.print()}
-              className={`inline-flex cursor-pointer items-center rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500`}
+              className={`inline-flex cursor-pointer items-center rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400`}
             >
               Download as PDF
             </button>
             <Link
               to="/"
-              className={`inline-flex items-center rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500`}
+              className={`inline-flex items-center rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400`}
             >
               Back to Portfolio
             </Link>

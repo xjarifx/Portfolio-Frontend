@@ -12,7 +12,7 @@ export const Badge = ({
   ...props
 }) => {
   const variants = {
-    accent: "bg-purple-950/50 text-purple-300 border border-purple-800",
+    accent: "bg-gray-800 text-purple-300 border border-gray-700",
     default: "bg-gray-800 text-gray-300 border border-gray-600",
   };
 

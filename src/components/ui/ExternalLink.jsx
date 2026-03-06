@@ -20,7 +20,7 @@ export const ExternalLink = ({
       target="_blank"
       rel="noreferrer noopener"
       className={cn(
-        "inline-flex items-center gap-1 rounded-md border border-gray-600 bg-gray-800 px-2.5 py-1 text-xs font-medium text-gray-300 transition-colors hover:border-purple-700 hover:bg-purple-950/50 hover:text-purple-300 focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:outline-none",
+        "inline-flex items-center gap-1 rounded-md border border-gray-600 bg-gray-800 px-2.5 py-1 text-xs font-medium text-gray-300 transition-colors hover:text-purple-300 focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none",
         className
       )}
       aria-label={label || `${children} (opens in a new tab)`}

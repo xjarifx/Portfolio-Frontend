@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 export const CardLink = ({ href, children, ariaLabel }) => {
   return (
     <a
-      className="inline-flex items-baseline font-medium text-gray-100 transition-colors hover:text-purple-400 focus-visible:text-purple-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 group/link text-base leading-tight"
+      className="inline-flex items-baseline font-medium text-gray-100 transition-colors hover:text-purple-300 focus-visible:text-purple-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400 group/link text-base leading-tight"
       href={href}
       target="_blank"
       rel="noreferrer noopener"

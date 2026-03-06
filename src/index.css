@@ -19,8 +19,8 @@ body {
   --color-border: #374151;
   --color-text: #9ca3af;
   --color-text-primary: #f3f4f6;
-  --color-accent: #a78bfa;
-  --color-accent-hover: #c4b5fd;
+  --color-accent: #c4b5fd;
+  --color-accent-hover: #ddd6fe;
 }
 
 @media print {

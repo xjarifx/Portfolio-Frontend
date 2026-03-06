@@ -52,7 +52,7 @@ export const Header = ({
             href={resumeHref}
             target="_blank"
             rel="noreferrer noopener"
-            className={`inline-flex items-center gap-2 rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-purple-500 focus-visible:outline-none`}
+            className={`inline-flex items-center gap-2 rounded-md border ${theme.colors.border} ${theme.colors.buttonBg} px-3 py-1.5 text-sm font-medium ${theme.colors.textPrimary} ${theme.colors.surfaceHover} ${theme.colors.accentHover} cursor-pointer transition-colors focus-visible:ring-2 focus-visible:ring-purple-400 focus-visible:outline-none`}
             aria-label="Open generated resume"
           >
             Resume
