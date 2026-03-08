@@ -309,7 +309,7 @@ const SocialLinks = ({ metadata, theme }) => {
       <li className="mr-5 shrink-0 text-sm">
         <a
           className="inline-block rounded-md border border-purple-400 px-2 py-1 text-purple-400 transition-colors hover:bg-purple-400 hover:text-white"
-          href="/resume/resume.pdf"
+          href="/resume/Resume.pdf"
           target="_blank"
           rel="noreferrer noopener"
           aria-label="Resume (opens PDF in new tab)"

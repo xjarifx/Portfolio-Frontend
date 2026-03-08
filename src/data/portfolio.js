@@ -34,7 +34,7 @@ export const portfolio = {
       type: "text",
       title: "Summary",
       content: [
-        "Software engineer building responsive web experiences and scalable backend systems with React, Node.js, and PostgreSQL.",
+        "Full-stack engineer building web applications with React, Node.js, and TypeScript, experienced in scalable frontend interfaces, backend APIs, and cloud deployment.",
       ],
     },
 
@@ -48,36 +48,15 @@ export const portfolio = {
       title: "Projects",
       items: [
         {
-          title: "Fire Watch",
+          title: "Social Media (Full-Stack)",
           description:
-            "A simple parallax website inspired by the Firewatch game landing page, focused on layered scrolling visuals and immersive storytelling.",
+            "A complete social network with authentication, posts, comments, likes, follows, notifications, and user blocking functionality.",
           highlights: [
-            "Built a smooth multi-layer parallax scrolling effect for a cinematic landing experience",
-            "Replicated Firewatch-inspired visual composition while keeping the interface lightweight",
-            "Deployed with fast static hosting for easy sharing and live preview",
+            "Built social network with auth, posts, comments, likes, follows, notifications, and user blocking",
+            "Integrated Stripe payments for PRO subscriptions and Redis caching for optimized performance",
+            "Developed RESTful API with Prisma ORM and responsive UI using TailwindCSS and Radix UI",
           ],
-          techStack: ["React", "Tailwind CSS", "TypeScript", "Vercel"],
-          links: [
-            {
-              label: "GitHub",
-              url: "https://github.com/xjarifx/parallax",
-            },
-            {
-              label: "Live Preview",
-              url: "https://parallax-nine-gilt.vercel.app/",
-            },
-          ],
-        },
-        {
-          title: "Social Network",
-          description:
-            "A complete social media web application where users can create posts, follow profiles, react, comment, and chat in real time.",
-          highlights: [
-            "Built secure authentication with JWT, protected routes, and role-based permissions",
-            "Implemented real-time messaging and notifications using Socket.io",
-            "Designed scalable REST APIs with optimized queries and pagination",
-          ],
-          techStack: ["React", "Node.js", "Express", "PostgreSQL", "Socket.io"],
+          techStack: ["React", "TypeScript", "Node.js", "Express", "PostgreSQL", "Redis"],
           links: [
             {
               label: "GitHub",
@@ -90,15 +69,36 @@ export const portfolio = {
           ],
         },
         {
-          title: "Our Bloom",
+          title: "Slack (Frontend)",
+          description:
+            "A modern, modular Next.js landing page inspired by Slack, built with TypeScript, Tailwind CSS, and reusable components.",
+          highlights: [
+            "Architected component-driven design system with reusable UI components",
+            "Achieved 100% TypeScript coverage with strict type safety and interface-driven development",
+            "Optimized build performance and maintained 90+ Lighthouse scores across all metrics",
+          ],
+          techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
+          links: [
+            {
+              label: "GitHub",
+              url: "https://github.com/xjarifx/slack-landing-page",
+            },
+            {
+              label: "Live Preview",
+              url: "https://slack-landing-page-two.vercel.app/",
+            },
+          ],
+        },
+        {
+          title: "Flower Shop (Frontend)",
           description:
             "A modern, responsive flower shop frontend with product showcases, category filtering, cart preview, and smooth mobile-first UI.",
           highlights: [
-            "Created reusable UI components and clean page composition",
-            "Implemented responsive layouts and accessible interactions",
-            "Optimized loading performance and visual consistency across devices",
+            "Developed responsive multi-page application with gallery and service showcase",
+            "Optimized performance using WebP conversion and image prefetching strategies",
+            "Implemented type-safe components with React 19 and modern CSS styling",
           ],
-          techStack: ["React", "JavaScript", "Tailwind CSS", "Vite"],
+          techStack: ["React", "TypeScript", "Tailwind CSS"],
           links: [
             {
               label: "GitHub",
@@ -111,23 +111,23 @@ export const portfolio = {
           ],
         },
         {
-          title: "Slack Landing Page",
+          title: "Game Shop (Frontend)",
           description:
-            "A modern, modular Next.js landing page inspired by Slack, built with TypeScript, Tailwind CSS, and reusable components.",
+            "A parallax website inspired by the Firewatch game landing page, focused on layered scrolling visuals and immersive storytelling.",
           highlights: [
-            "Built a modular component library with 8 reusable components, reducing code duplication by ~70%",
-            "Type-safe props and consistent styling via shared constants and SectionHeading, Accordion, Button patterns",
-            "Production-ready structure with separation of concerns, accessibility, and responsive design",
+            "Built 7-layer parallax scene with custom mouse-tracking hook and cinematic animations",
+            "Developed reusable TypeScript components with responsive design and embedded media",
+            "Implemented accessibility features including motion-reduction and semantic HTML",
           ],
-          techStack: ["Next.js", "TypeScript", "Tailwind CSS", "Vercel"],
+          techStack: ["React", "TypeScript", "Tailwind CSS"],
           links: [
             {
               label: "GitHub",
-              url: "https://github.com/xjarifx/slack-landing-page",
+              url: "https://github.com/xjarifx/parallax",
             },
             {
               label: "Live Preview",
-              url: "https://slack-landing-page-two.vercel.app/",
+              url: "https://parallax-nine-gilt.vercel.app/",
             },
           ],
         },

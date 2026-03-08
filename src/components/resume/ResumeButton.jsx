@@ -4,7 +4,7 @@
 export const ResumeButton = ({ className }) => {
   return (
     <a
-      href="/resume/resume.pdf"
+      href="/resume/Resume.pdf"
       target="_blank"
       rel="noreferrer noopener"
       className={className}
