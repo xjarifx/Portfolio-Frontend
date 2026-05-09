@@ -51,21 +51,21 @@ export default function Home() {
           <div className="flex gap-4 flex-wrap">
             <div className="border-[3px] border-black bg-blue-500 shadow-[2px_2px_0_#000] px-5 py-3.5">
               <button onClick={() => copy(metadata.email, "Email")}
-                className="text-sm font-semibold text-white no-underline border-b-2 border-white/30 bg-transparent border-t-0 border-l-0 border-r-0 cursor-pointer font-['Inter',system-ui,sans-serif] p-0">
-                ✉ {metadata.email}
+                className="text-sm font-semibold text-white no-underline border-b-0 hover:border-b-2 hover:border-white/30 bg-transparent border-t-0 border-l-0 border-r-0 cursor-pointer font-['Inter',system-ui,sans-serif] p-0 transition-[border-bottom-width] duration-100">
+                {metadata.email}
               </button>
             </div>
             <div className="border-[3px] border-black bg-blue-500 shadow-[2px_2px_0_#000] px-5 py-3.5">
               <button onClick={() => copy(metadata.phone, "Phone")}
-                className="text-sm font-semibold text-white no-underline border-b-2 border-white/30 bg-transparent border-t-0 border-l-0 border-r-0 cursor-pointer font-['Inter',system-ui,sans-serif] p-0">
-                ✆ {metadata.phone}
+                className="text-sm font-semibold text-white no-underline border-b-0 hover:border-b-2 hover:border-white/30 bg-transparent border-t-0 border-l-0 border-r-0 cursor-pointer font-['Inter',system-ui,sans-serif] p-0 transition-[border-bottom-width] duration-100">
+                {metadata.phone}
               </button>
             </div>
           </div>
         </section>
 
         <section id="g-projects">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-black pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-blue-500 pb-3">
             Projects
           </h2>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5 max-sm:grid-cols-1">
@@ -89,7 +89,7 @@ export default function Home() {
         </section>
 
         <section id="g-stack">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-black pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-emerald-500 pb-3">
             Stack
           </h2>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4">
@@ -107,7 +107,7 @@ export default function Home() {
         </section>
 
         <section id="g-certs">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-black pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-purple-500 pb-3">
             Certifications
           </h2>
           {cert?.items.map((c, i) => (
@@ -125,7 +125,7 @@ export default function Home() {
         </section>
 
         <section id="g-edu">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-black pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-amber-500 pb-3">
             Education
           </h2>
           {edu?.items.map((e, i) => (
@@ -136,11 +136,6 @@ export default function Home() {
           ))}
         </section>
       </main>
-
-      <footer className="border-t-[3px] border-black px-6 py-4 flex justify-center gap-6 text-xs font-semibold text-[#525252] bg-[#fef08a]">
-        <span>{metadata.email}</span>
-        <span>{metadata.phone}</span>
-      </footer>
     </div>
   );
 }
