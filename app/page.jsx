@@ -11,30 +11,9 @@ const allProjects = projects?.items || [];
 
 const socialLabels = { github: "GitHub", linkedin: "LinkedIn", x: "X / Twitter", leetcode: "LeetCode" };
 
-const navLinks = [
-  { id: "g-projects", label: "Projects" },
-  { id: "g-stack", label: "Stack" },
-  { id: "g-certs", label: "Certs" },
-  { id: "g-edu", label: "Education" },
-];
-
 export default function Home() {
   return (
     <div className="g-root">
-      <header className="g-header">
-        <div className="g-header-inner">
-          <div className="g-brand">
-            <span className="g-brand-icon">⊞</span>
-            <span className="g-brand-name">{metadata.name}</span>
-          </div>
-          <nav className="g-nav" aria-label="Sections">
-            {navLinks.map((l) => (
-              <a key={l.id} href={`#${l.id}`} className="g-nav-link">{l.label}</a>
-            ))}
-          </nav>
-        </div>
-      </header>
-
       <main className="g-main">
         <section className="g-hero">
           <h1 className="g-hero-title">{metadata.name}</h1>

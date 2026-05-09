@@ -39,58 +39,6 @@ body {
   flex-direction: column;
 }
 
-.g-header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: #fff;
-  border-bottom: 3px solid #000;
-}
-
-.g-header-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 12px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.g-brand {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 16px;
-  color: #000;
-}
-
-.g-brand-icon { font-size: 24px; }
-.g-brand-name { letter-spacing: -0.02em; }
-
-.g-nav {
-  display: flex;
-  gap: 4px;
-}
-
-.g-nav-link {
-  padding: 6px 14px;
-  border: 2px solid #000;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #000;
-  background: #fff;
-  box-shadow: 3px 3px 0 #000;
-  transition: transform .1s, box-shadow .1s;
-}
-
-.g-nav-link:hover {
-  transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 #000;
-}
-
 .g-main {
   flex: 1;
   max-width: 1100px;
@@ -156,12 +104,6 @@ body {
   color: #000;
   background: #fff;
   box-shadow: 3px 3px 0 #000;
-  transition: transform .1s, box-shadow .1s;
-}
-
-.g-hero-link:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 #000;
 }
 
 .g-contact-bar {
@@ -179,10 +121,7 @@ body {
   color: #fff;
   text-decoration: none;
   border-bottom: 2px solid rgba(255,255,255,0.3);
-  transition: border-color .2s;
 }
-
-.g-contact-link:hover { border-color: #fff; }
 
 .g-grid {
   display: grid;
@@ -194,12 +133,6 @@ body {
   border: 3px solid #000;
   background: #fff;
   box-shadow: 6px 6px 0 #000;
-  transition: transform .15s, box-shadow .15s;
-}
-
-.g-card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 9px 9px 0 #000;
 }
 
 .g-card-content { padding: 24px; }
@@ -235,10 +168,7 @@ body {
   color: #000;
   background: #fef08a;
   box-shadow: 2px 2px 0 #000;
-  transition: transform .1s;
 }
-
-.g-card-link:hover { transform: translate(-1px, -1px); }
 
 .g-stack-grid {
   display: grid;
@@ -305,6 +235,5 @@ body {
 
 @media (max-width: 640px) {
   .g-hero-title { font-size: 32px; }
-  .g-header-inner { flex-direction: column; gap: 12px; }
   .g-grid { grid-template-columns: 1fr; }
 }
