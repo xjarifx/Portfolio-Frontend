@@ -1,7 +1,8 @@
+"use client";
+
 // Design K — Accessible, pixel-perfect minimal portfolio · JetBrains Mono
 import { useState, useRef, useCallback, useEffect } from "react";
 import { portfolio } from "../data/portfolio";
-import "./DesignK.css";
 
 const { metadata, sections } = portfolio;
 
@@ -61,7 +62,7 @@ export default function DesignK() {
   const [phoneCopied, copyPhone] = useCopy(metadata.phone);
 
   return (
-    <div className="k-root" suppressHydrationWarning>
+    <div className="k-root">
       {/* Skip to content link — accessibility */}
       <a href="#main-content" className="k-skip">Skip to content</a>
 
