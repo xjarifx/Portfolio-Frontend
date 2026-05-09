@@ -65,7 +65,7 @@ export default function Home() {
         </section>
 
         <section id="g-projects">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-blue-500 pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-rose-500 pb-3">
             Projects
           </h2>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5 max-sm:grid-cols-1">
