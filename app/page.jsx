@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useRef } from "react";
 import { portfolio } from "@/src/data/portfolio";
 
 const { metadata, sections } = portfolio;
@@ -14,17 +14,31 @@ const socialLabels = { github: "GitHub", linkedin: "LinkedIn", x: "Twitter/X" };
 
 export default function Home() {
   const [toast, setToast] = useState(null);
+  const [exiting, setExiting] = useState(false);
+  const timerRef = useRef(null);
 
   const copy = useCallback((text, label) => {
     navigator.clipboard.writeText(text);
+    clearTimeout(timerRef.current);
+    setExiting(false);
     setToast(`${label} copied`);
-    setTimeout(() => setToast(null), 2000);
+    const pauseTimer = setTimeout(() => {
+      setExiting(true);
+      timerRef.current = setTimeout(() => {
+        setToast(null);
+        setExiting(false);
+      }, 400);
+    }, 1500);
+    timerRef.current = pauseTimer;
   }, []);
 
   return (
     <div className="min-h-screen bg-[#fafafa] font-['Inter',system-ui,sans-serif] flex flex-col">
       {toast && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[9999] bg-green-600 text-white px-6 py-2.5 rounded-lg text-sm font-semibold font-['Inter',system-ui,sans-serif] shadow-[0_2px_8px_rgba(0,0,0,0.12)] animate-[g-toast-in_0.3s_ease]">
+        <div
+          className="fixed top-6 right-6 z-[9999] bg-green-600 text-white px-6 py-2.5 text-sm font-semibold font-['Inter',system-ui,sans-serif] border-[3px] border-black shadow-[2px_2px_0_#000]"
+          style={{ animation: `${exiting ? 'g-toast-out' : 'g-toast-in'} 0.4s ease forwards` }}
+        >
           {toast}
         </div>
       )}
