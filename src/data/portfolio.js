@@ -9,13 +9,12 @@ export const portfolio = {
       "I build responsive web experiences and scalable backend systems end-to-end.",
     email: "xjarifx@gmail.com",
     phone: "+880 1540165110",
+    location: "Dhaka, Bangladesh",
 
     // Social links - displayed in sidebar footer
     social: {
       github: "https://github.com/xjarifx",
       linkedin: "https://www.linkedin.com/in/xjarifx",
-      x: "https://x.com/J4R1F",
-      leetcode: "https://leetcode.com/xjarifx",
     },
   },
 

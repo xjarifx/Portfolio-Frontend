@@ -10,7 +10,7 @@ const cert = sections.find(s => s.type === "certification");
 const edu = sections.find(s => s.type === "education");
 const allProjects = projects?.items || [];
 
-const socialLabels = { github: "GitHub", linkedin: "LinkedIn", x: "X / Twitter", leetcode: "LeetCode" };
+const socialLabels = { github: "GitHub", linkedin: "LinkedIn" };
 
 export default function Home() {
   const [toast, setToast] = useState(null);
@@ -33,11 +33,11 @@ export default function Home() {
           <h1 className="text-3xl sm:text-5xl font-black tracking-tighter text-black leading-none mb-1">
             {metadata.name}
           </h1>
-          <p className="text-xl font-bold text-pink-500 uppercase mb-3">
+          <p className="text-xl font-bold text-pink-500 uppercase mb-1">
             {metadata.title}
           </p>
-          <p className="text-[15px] text-[#525252] leading-relaxed mb-5">
-            {metadata.tagline}
+          <p className="text-[13px] text-[#525252] mb-5">
+            {metadata.location}
           </p>
           <div className="flex gap-2 flex-wrap mb-6">
             {Object.entries(metadata.social).filter(([, v]) => v).map(([k, v]) => (
@@ -65,7 +65,7 @@ export default function Home() {
         </section>
 
         <section id="g-projects">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-rose-500 pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-emerald-500 pb-3">
             Projects
           </h2>
           <div className="flex flex-col gap-5">
@@ -93,7 +93,7 @@ export default function Home() {
         </section>
 
         <section id="g-stack">
-          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-emerald-500 pb-3">
+          <h2 className="text-3xl font-extrabold uppercase tracking-tighter text-black mb-8 border-b-4 border-rose-500 pb-3">
             Stack
           </h2>
           <div className="grid grid-cols-[repeat(auto-fill,minmax(240px,1fr))] gap-4">
