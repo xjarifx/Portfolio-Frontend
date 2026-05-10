@@ -10,7 +10,7 @@ const cert = sections.find(s => s.type === "certification");
 const edu = sections.find(s => s.type === "education");
 const allProjects = projects?.items || [];
 
-const socialLabels = { github: "GitHub", linkedin: "LinkedIn" };
+const socialLabels = { github: "GitHub", linkedin: "LinkedIn", x: "Twitter/X" };
 
 export default function Home() {
   const [toast, setToast] = useState(null);

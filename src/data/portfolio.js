@@ -15,6 +15,7 @@ export const portfolio = {
     social: {
       github: "https://github.com/xjarifx",
       linkedin: "https://www.linkedin.com/in/xjarifx",
+      x: "https://x.com/J4R1F",
     },
   },
 
